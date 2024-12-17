@@ -16,6 +16,8 @@ const countryName = country === BELGIUM ? "Bélgica" : "España";
 // Obtener URL de compra
 const { buy } = Astro.props;
 const url = buy[storeCountry] 
+export const prerender = false; // Asegúrate de no prerender estas islands si necesitas funcionalidad de backend.
+
 ---
 <a
   href={ url}

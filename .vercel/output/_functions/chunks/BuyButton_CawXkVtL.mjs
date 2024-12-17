@@ -7,6 +7,7 @@ const $$AmazonLogo = createComponent(($$result, $$props, $$slots) => {
 }, "C:/Users/Gus/Desktop/portafolio/clon-Netflix/ASTRO/dev-books/src/components/AmazonLogo.astro", void 0);
 
 const $$Astro = createAstro();
+const prerender = false;
 const $$BuyButton = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BuyButton;
@@ -25,4 +26,4 @@ Comprar en Amazon ${countryName} ${renderComponent($$result, "AmazonLogo", $$Ama
 const $$file = "C:/Users/Gus/Desktop/portafolio/clon-Netflix/ASTRO/dev-books/src/components/BuyButton.astro";
 const $$url = void 0;
 
-export { $$BuyButton as default, $$file as file, $$url as url };
+export { $$BuyButton as default, $$file as file, prerender, $$url as url };
