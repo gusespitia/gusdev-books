@@ -10,18 +10,19 @@ const $$Astro = createAstro();
 const $$BuyButton = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BuyButton;
-  const SPAIN = "ES";
-  const country = Astro2.request.headers.get("X-Vercel-IP-Country") ?? SPAIN;
-  const storeCountry = country === SPAIN ? "spain" : "belgium";
-  const countryName = country === SPAIN ? "Espa\xF1a" : "B\xE9lgica";
+  const BELGIUM = "BE";
+  const country = Astro2.request.headers.get("X-Vercel-IP-Country") ?? "No Header Found";
+  const showBuyButton = "true";
+  console.log("Country Header:", country);
+  console.log("SHOW_BUY_BUTTON:", showBuyButton);
+  const storeCountry = country === BELGIUM ? "belgium" : "spain";
+  const countryName = country === BELGIUM ? "Bélgica" : "España";
   const { buy } = Astro2.props;
-  const url = buy[storeCountry] ?? "#";
-  const isValidUrl = buy[storeCountry] !== void 0;
-  return renderTemplate`${maybeRenderHead()}<a${addAttribute(isValidUrl ? url : "#", "href")}${addAttribute(`Comprar Libro en Amazon ${countryName}`, "title")} target="_blank" rel="noopener noreferrer"${addAttribute(`flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 transition duration-200 transform hover:scale-105 text-black font-bold py-2 px-4 rounded-lg justify-center border border-yellow-500 ${isValidUrl ? "" : "cursor-not-allowed opacity-50"}`, "class")}>
+  const url = buy[storeCountry];
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")}${addAttribute(`Comprar Libro en Amazon ${countryName}`, "title")} target="_blank" rel="noopener noreferrer" class="text-balance inline-flex gap-2 items-center bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg border border-yellow-500 transition duration-200 ease-in-out hover:scale-105 justify-center text-center">
 Comprar en Amazon ${countryName} ${renderComponent($$result, "AmazonLogo", $$AmazonLogo, {})} </a>`;
 }, "C:/Users/Gus/Desktop/portafolio/clon-Netflix/ASTRO/dev-books/src/components/BuyButton.astro", void 0);
-
 const $$file = "C:/Users/Gus/Desktop/portafolio/clon-Netflix/ASTRO/dev-books/src/components/BuyButton.astro";
-const $$url = undefined;
+const $$url = void 0;
 
 export { $$BuyButton as default, $$file as file, $$url as url };
