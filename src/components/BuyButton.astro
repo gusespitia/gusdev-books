@@ -1,12 +1,12 @@
 ---
 import AmazonLogo from "./AmazonLogo.astro"
 
-const BELGIUM = 'BE'
+const SPAIN = 'ES'
 
-const country = Astro.request.headers.get('X-Vercel-IP-Country') ?? 'BE'
+const country = Astro.request.headers.get('X-Vercel-IP-Country') ?? 'ES'
 
-const storeCountry = country === BELGIUM ? 'belgium' : 'spain'
-const countryName = country === BELGIUM ? 'Belgica' : 'España'
+const storeCountry = country === SPAIN ? 'spain' : 'belgium'
+const countryName = country === SPAIN ? 'España' : 'Belgica'
 
 const { buy } = Astro.props
 const url = buy[storeCountry]
