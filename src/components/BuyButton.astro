@@ -3,7 +3,11 @@ import AmazonLogo from "./AmazonLogo.astro";
 
 const SPAIN = "ES";
 const BELGIUM = "BE";
-const country = Astro.request.headers.get("X-Vercel-IP-Country") ?? SPAIN;
+const country = Astro.request.headers.get("X-Vercel-IP-Country") ?? "No Header Found";
+const showBuyButton = import.meta.env.SHOW_BUY_BUTTON ?? "Not Set";
+
+console.log("Country Header:", country);
+console.log("SHOW_BUY_BUTTON:", showBuyButton);
 
 // Definir tienda y nombre del país
 const storeCountry = country === BELGIUM ? "belgium" : "spain" ;
