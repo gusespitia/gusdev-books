@@ -3,7 +3,7 @@ import { SCORE_API_ENDPOINT } from "astro:env/server";
 
 const res = await fetch( SCORE_API_ENDPOINT)
 const scoreValue = await res.text()
-export const prerender = false; // Asegúrate de no prerender estas islands si necesitas funcionalidad de backend.
+export const prerender = false; // Necesario si necesitas funcionalidad dinámica.
 
 
 
