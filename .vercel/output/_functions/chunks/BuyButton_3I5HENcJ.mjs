@@ -11,12 +11,13 @@ const $$BuyButton = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BuyButton;
   const SPAIN = "ES";
-  const country = Astro2.request.headers.get("X-Vercel-IP-Country") ?? "ES";
+  const country = Astro2.request.headers.get("X-Vercel-IP-Country") ?? SPAIN;
   const storeCountry = country === SPAIN ? "spain" : "belgium";
-  const countryName = country === SPAIN ? "Espan\u0303a" : "B\xE9lgica";
+  const countryName = country === SPAIN ? "Espa\xF1a" : "B\xE9lgica";
   const { buy } = Astro2.props;
-  const url = buy[storeCountry];
-  return renderTemplate`${maybeRenderHead()}<a${addAttribute(url, "href")} title="Comprar Libro" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 transition transform hover:scale-105 text-black font-bold py-2 px-4 rounded-lg justify-center border border-yellow-500">
+  const url = buy[storeCountry] ?? "#";
+  const isValidUrl = buy[storeCountry] !== void 0;
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(isValidUrl ? url : "#", "href")}${addAttribute(`Comprar Libro en Amazon ${countryName}`, "title")} target="_blank" rel="noopener noreferrer"${addAttribute(`flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 transition duration-200 transform hover:scale-105 text-black font-bold py-2 px-4 rounded-lg justify-center border border-yellow-500 ${isValidUrl ? "" : "cursor-not-allowed opacity-50"}`, "class")}>
 Comprar en Amazon ${countryName} ${renderComponent($$result, "AmazonLogo", $$AmazonLogo, {})} </a>`;
 }, "C:/Users/Gus/Desktop/portafolio/clon-Netflix/ASTRO/dev-books/src/components/BuyButton.astro", void 0);
 
