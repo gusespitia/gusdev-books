@@ -6,7 +6,6 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   output: 'server',
 
-
   env: {
     schema: {
       SHOW_BUY_BUTTON: envField.boolean({ default: true, context: 'server', access: 'public' }),
