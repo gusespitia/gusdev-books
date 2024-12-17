@@ -17,6 +17,11 @@ export default defineConfig({
     }
   },
 
-  // @ts-ignore
-  adapter: vercel()
+
+  adapter: vercel({
+    imageService: true,
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
