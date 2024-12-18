@@ -34,15 +34,16 @@ export const prerender = true;
         alt={title}
         class="rounded-lg w-64 h-auto sm:w-72 lg:w-full object-cover shadow-md"
       />
-
-      <BookScore  id={slug}>
-        <span slot="fallback" class="opacity-70 text-xs"
-          >Cargando Puntuación...</span
-        >
+    
+      <!-- `BookScore` con render diferido -->
+      <BookScore server:defer id={slug}>
+        <span slot="fallback" class="opacity-70 text-xs">Cargando Puntuación...</span>
       </BookScore>
-
-      {SHOW_BUY_BUTTON && <BuyButton  buy={buy} />}
+    
+      <!-- `BuyButton` siempre disponible -->
+      {SHOW_BUY_BUTTON && <BuyButton buy={buy} />}
     </aside>
+    
 
     <!-- Contenido principal -->
     <main class="flex-1 max-w-3xl mx-auto lg:mx-0">
