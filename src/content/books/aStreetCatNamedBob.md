@@ -1,9 +1,8 @@
 ---
 title: A Street Cat Named Bob And How He Saved My Life
-
 author: James Bowen
 description: The Instant New York Times bestseller! A Street Cat Named Bob is now a major motion picture, the film’s all-star cast includes Luke Treadway (Unbroken, Clash of the Titans), Joanne Froggatt (Downton Abbey), and Ruta Gedmintas (The Borgias).
-readTime: 10
+readtime: 10
 img: /AStreetCatNamedBob.jpg
 buy:
   spain: https://www.amazon.com/-/es/James-Bowen-ebook/dp/B00B22ASUM/ref=sr_1_1?s=digital-text&sr=1-1

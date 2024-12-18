@@ -1,10 +1,8 @@
 ---
 title: Me Before You (Me Before You Trilogy)
-
 author: Jojo Moyes
-description: >
-  From the #1 New York Times bestselling author of The Giver of Stars and the forthcoming Someone Else's Shoes, discover the love story that captured over 20 million hearts in Me Before You, After You, and Still Me.
-readTime: 30
+description: From the #1 New York Times bestselling author of The Giver of Stars and the forthcoming Someone Else's Shoes, discover the love story that captured over 20 million hearts in Me Before You, After You, and Still Me.
+readtime: 30
 img: /MeBeforeYou.jpg
 buy:
   spain: https://www.amazon.com/-/es/Alexander-Zelenskiy-ebook/dp/B01J02400E/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=
