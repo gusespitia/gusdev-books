@@ -18,6 +18,7 @@ const { slug, data } = book;
 
 const { title, author, img, buy, description, readTime } = data;
 const { Content } = await render(book);
+
 export const prerender = true;
 ---
 
@@ -36,7 +37,7 @@ export const prerender = true;
       />
     
       <!-- `BookScore` con render diferido -->
-      <BookScore server:defer id={slug}>
+      <BookScore server:only id={slug}>
         <span slot="fallback" class="opacity-70 text-xs">Cargando Puntuación...</span>
       </BookScore>
     
