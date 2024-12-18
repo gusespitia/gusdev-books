@@ -37,7 +37,7 @@ export const prerender = true;
       />
     
       <!-- `BookScore` con render diferido -->
-      <BookScore server:only id={slug}>
+      <BookScore  id={slug}>
         <span slot="fallback" class="opacity-70 text-xs">Cargando Puntuación...</span>
       </BookScore>
     
