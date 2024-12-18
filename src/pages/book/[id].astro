@@ -35,13 +35,13 @@ export const prerender = true;
         class="rounded-lg w-64 h-auto sm:w-72 lg:w-full object-cover shadow-md"
       />
 
-      <BookScore server:defer id={slug}>
+      <BookScore  id={slug}>
         <span slot="fallback" class="opacity-70 text-xs"
           >Cargando Puntuación...</span
         >
       </BookScore>
 
-      {SHOW_BUY_BUTTON && <BuyButton server:defer buy={buy} />}
+      {SHOW_BUY_BUTTON && <BuyButton  buy={buy} />}
     </aside>
 
     <!-- Contenido principal -->
